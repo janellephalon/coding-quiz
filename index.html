@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!--My Style Sheet -->
+<!--Style Sheet -->
     <link rel="stylesheet" href="./style.css" /> 
 <!--Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 <!-- Assignment Title -->
     <title>
-        Coding Quiz
+        JS Coding Quiz
     </title>
 </head>
 <body>
@@ -28,13 +28,80 @@
             </div>
         </header>
 
-        
+<!-- Coding Challenge Title --> 
+        <section id="title-section" class="show">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Coding Quiz Challenge</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds! 
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="startButton">Start Quiz</button>
+                </div>
+            </div>
+        </section>
+
+    <!-- Coding Questions -->
+        <section id="quiz-section" class="hide">
+            <div class="row">
+                <div class="col-md-12 questions">
+                    <h3 id="question-title"></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" id="choices"></div>
+                <div id="feedback" class="feedback hide"></div>
+            </div>
+        </section>
+
+    <!-- High Score Section -->
+        <section id="highscore-section" class="hide">
+            <div class="row">
+                <div id="high-score" class="col-md-12">
+                    <h2>
+                        All done!
+                    </h2>
+                    <h3>
+                        Your final score is <span id="final score">0</span>
+                    </h3>
+
+    <!-- Initials Input -->
+                    <label for="intials-area">Enter Initials:</label>
+                    <input type="text" name="initials-area" maxlength="4" id="initials">
+                    
+    <!-- Submit Button -->
+                    <button id="submit-button" type="submit">Submit</button>
+                </div>
+            </div>
+        </section>
     </div>
 
 
 
-   
-   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous">        
-    </script>
+    <!-- Script JS -->
+    <script type="text/javasctipt" src="./Assets/js/script.js"></script>    
+
+    <!-- Questions JS -->
+    <script type="text/javascript" src="./Assets/js/questions.js"></script>
+
+     <!-- Scores JS -->
+    <script type="text/javascript" src="./Assets/js/scores.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous">        
+</script>
+    
+
 </body>
 </html>
