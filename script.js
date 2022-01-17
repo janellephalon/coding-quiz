@@ -39,7 +39,7 @@ var wrapper = document.querySelector("#wrapper");
 var secondsLeft = 76;
 var holdInterval = 0;
 var penalty = 10;
-var ulCreate = document.createElement("ul");
+var olCreate = document.createElement("ol");
 
 // Timer Function 
 timer.addEventListener("click", function() {
@@ -61,7 +61,7 @@ timer.addEventListener("click", function() {
 // Questions and Choices to Page 
 function render(questionIndex) {
     questionsDiv.innerHTML = "";
-    ulCreate.innerHTML = "";
+    olCreate.innerHTML = "";
     // For Loop Through Array
     for(var i = 0; i < questions.length; i++) {
         // Append Question Title Only
@@ -74,8 +74,8 @@ function render(questionIndex) {
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
-        questionsDiv.appendChild(ulCreate);
-        ulCreate.appendChild(listItem);
+        questionsDiv.appendChild(olCreate);
+        olCreate.appendChild(listItem);
         listItem.addEventListener("click", (compare));
     })
 }
@@ -115,10 +115,30 @@ function allDone() {
     questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 
+// Heading 
 var createH1 = document.createElement("h1");
 createH1.setAttribute("id", "createH1");
 createH1.textContent = "All done!";
 questionsDiv.appendChild(createH1);
+
+// Paragraph
+var createParagraph = document.createElement("p");
+createParagraph.setAttribute("id", "createParagraph");
+questionsDiv.appendChild(createParagraph);
+
+if(secondsLeft >= 0) {
+    var timeRemaining = secondsLeft;
+    var createParagraph2 = document.createElement("p");
+    clearInterval(holdInterval);
+    createParagraph.textContent = "Your final score is: " + timeRemaining;
+    questionsDiv.appendChild(createParagraph2);
+}
+
+// Initials
+var createTitle = document.createElement("title");
+createTitle.setAttribute("id", "createLabel");
+createTitle.textContent = "Enter your initials: ";
+questionsDiv.appendChild(createTitle);
 
 // Input
 var createInput = document.createElement("input");
