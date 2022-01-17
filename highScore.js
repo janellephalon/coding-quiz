@@ -14,13 +14,12 @@ allScores = JSON.parse(allScores);
 
 if(allScores !== null) {
     for(var i = 0; i < allScores.length; i++) {
-
         var createList = document.createElement("li"); 
-        createList.textcontent = allScores[i].initials + " " + highScore.appendChild(createList);
+        createList.textContent = allScores[i].initials + " " + highScore.appendChild(createList);
     }
-}
+};
 
 // Return Home
 returnHome.addEventListener("click", function() {
-    window.location.replace("index.html");
+    window.location.replace("./index.html");
 });
