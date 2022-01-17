@@ -1,21 +1,23 @@
 ol li {
-    background-color: cadetblue;
+    background-color: cornflowerblue;
     margin-top: 10px;
     padding: 5px 15px;
     width: 80%;
     font-size: 22px;
     color: black;
     list-style-type: none;
+    
+
 }
 
 
 @media screen and (max-width: 786px) {
-    /* Resized content to fit 786px  */
+    /* 786px  */
     body {
         max-width: 786px;
     }
-    /* Resized main-content to fit 786px  */
-    #wrapper {
+
+    #section {
     position: absolute;
     left: 20%;
     }
@@ -23,7 +25,7 @@ ol li {
     a {
     margin-left: 20%;
     }
-    #goBack {
+    #returnHome {
         
         position: relative;
         left: 55%;
@@ -37,14 +39,14 @@ ol li {
     }
     }
     
-    /* A Media Query max-width: 640px */
+    /* 640px */
     @media screen and (max-width: 640px) {
-    /* Resized content to fit 640px  */
+ 
     body {
         min-width: 640px;
     }
-    /* Resized main-content to fit 640px  */
-    #wrapper {
+
+    #section {
     position: absolute;
     left: 10%;
     }
