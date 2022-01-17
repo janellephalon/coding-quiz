@@ -34,7 +34,7 @@ var questionIndex = 0;
 var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
-var wrapper = document.querySelector("#wrapper");
+var section = document.querySelector("#section");
 
 var secondsLeft = 76;
 var holdInterval = 0;
